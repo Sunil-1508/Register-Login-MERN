@@ -9,7 +9,7 @@ const port = 5001;
 app.use(express.json())
 app.use(cors(
   {
-    origin:["https://register-login-mern-cqub-k1vru1lbm-sunil-noolus-projects.vercel.app"],
+    origin:["https://register-login-mern.vercel.app/"],
     methods:["POST","GET"],
     credentials: true
   }

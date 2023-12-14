@@ -17,7 +17,7 @@ function Login() {
     } 
     else {
       try {
-        const response = await axios.post('https://register-login-mern-cqub-k1vru1lbm-sunil-noolus-projects.vercel.app/validate', data);
+        const response = await axios.post('https://register-login-mern.vercel.app/validate', data);
         console.log('Request sent:', response.data);
         window.alert('Login Successful :)');
       } catch (error) {
