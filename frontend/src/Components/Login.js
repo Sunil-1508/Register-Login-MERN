@@ -17,7 +17,7 @@ function Login() {
     } 
     else {
       try {
-        const response = await axios.post('http://localhost:5001/validate', data);
+        const response = await axios.post('https://register-login-mern-cqub.vercel.app/validate', data);
         console.log('Request sent:', response.data);
         window.alert('Login Successful :)');
       } catch (error) {
