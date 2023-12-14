@@ -7,13 +7,7 @@ import cors from 'cors'
 const app = express();
 const port = 5001;
 app.use(express.json())
-app.use(cors(
-  {
-    origin:["https://register-login-mern.vercel.app/"],
-    methods:["POST","GET"],
-    credentials: true
-  }
-))
+app.use(cors())
 
 app.listen(port, ()=> console.log(`server running in port ${port}`))
 
