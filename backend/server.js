@@ -2,7 +2,8 @@ import express from 'express'
 import mongoose from 'mongoose'
 import Data from './model.js'
 import cors from 'cors'
-
+import dotenv from 'dotenv'
+dotenv.config();
 const app = express();
 const port = 5001;
 app.use(express.json())
@@ -15,8 +16,7 @@ app.use(cors(
 ))
 
 app.listen(port, ()=> console.log(`server running in port ${port}`))
-
-mongoose.connect('mongodb+srv://sunilnoolu:sunil123@cluster0.shxe0yc.mongodb.net/Cluster0?retryWrites=true&w=majority')
+mongoose.connect(`${process.env.DB_URL}`)
 .then(()=>{ console.log("connected to MongoDB ");  })
 .catch(err => console.log(err))
 
